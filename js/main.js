@@ -58,7 +58,6 @@
       observer.observe(el);
     });
 
-    document.addEventListener('animationend', () => {}, { once: true });
   }
 
   /* ── Apply visible state via CSS class ─────────────────── */
