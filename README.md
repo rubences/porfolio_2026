@@ -1,29 +1,26 @@
 # Portfolio 2026 — Rubén Ces
 
-Portfolio académico y profesional de **Rubén Ces**
-([ORCID 0000-0003-2857-5693](https://orcid.org/0000-0003-2857-5693)).
+Portfolio académico y profesional de Rubén Ces, con foco en investigación aplicada,
+docencia universitaria y software público enlazado con actividad científica verificable.
 
 ## Estructura
 
-```
+```text
 porfolio_2026/
-├── index.html        # Página principal del portfolio
+├── index.html        Página principal del portfolio
 ├── css/
-│   └── styles.css    # Estilos (diseño oscuro, responsivo)
+│   └── styles.css    Dirección visual, layout responsive y capas del hero
 └── js/
-    └── main.js       # Navegación, animaciones y scroll
+    └── main.js       Menú, reveal on scroll, parallax y escena Three.js
 ```
 
-## Secciones
+## Novedades
 
-- **Hero** — Presentación con accesos directos a GitHub y ORCID.
-- **Sobre mí** — Breve biografía y estadísticas.
-- **Habilidades** — Lenguajes, frameworks, IA y más.
-- **Proyectos** — Selección de repositorios públicos.
-- **Publicaciones** — Enlace al perfil ORCID y áreas de investigación.
-- **Contacto** — GitHub y ORCID.
+- Hero visual con Three.js para una escena tridimensional reactiva.
+- Capas parallax ligadas a movimiento de puntero y scroll.
+- Sección de publicaciones con enlaces directos a artículos y tesis verificadas mediante ORCID y DOI.
+- Rediseño del portfolio con una composición más editorial y técnica.
 
 ## Uso
 
-Abre `index.html` directamente en el navegador o despliégalo con cualquier
-servidor estático (GitHub Pages, Netlify, Vercel…).
+Abre index.html en el navegador o publícalo como sitio estático. No requiere build.
