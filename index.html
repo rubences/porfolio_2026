@@ -3,221 +3,268 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rubén Ces — Portfolio 2026</title>
-  <meta name="description" content="Portfolio académico y profesional de Rubén Ces, profesor e investigador en Ingeniería Informática." />
-  <link rel="stylesheet" href="css/styles.css" />
+  <title>Rubén Ces | Portfolio 2026</title>
+  <meta
+    name="description"
+    content="Portfolio académico y profesional de Rubén Ces: investigación en IA, software, redes vehiculares y docencia universitaria."
+  />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
+  <div class="page-noise" aria-hidden="true"></div>
 
-  <!-- ─── NAVEGACIÓN ─────────────────────────────────────── -->
   <header class="site-header" id="top">
     <nav class="nav container">
-      <a href="#top" class="nav__logo">R.Ces<span class="dot">.</span></a>
-      <button class="nav__toggle" aria-label="Abrir menú" id="navToggle">
-        <span></span><span></span><span></span>
+      <a href="#top" class="nav__logo">Rubén Ces</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
       <ul class="nav__links" id="navLinks">
-        <li><a href="#sobre-mi">Sobre mí</a></li>
-        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#sobre-mi">Perfil</a></li>
+        <li><a href="#habilidades">Stack</a></li>
         <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#publicaciones">Publicaciones</a></li>
-        <li><a href="#contacto" class="btn btn--outline">Contacto</a></li>
+        <li><a href="#publicaciones">Artículos</a></li>
+        <li><a href="#contacto" class="btn btn--nav">Contacto</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- ─── HERO ──────────────────────────────────────────── -->
-  <section class="hero" id="hero">
-    <div class="container hero__inner">
-      <div class="hero__text">
-        <p class="hero__eyebrow">Profesor · Investigador · Desarrollador</p>
-        <h1 class="hero__title">Rubén Ces</h1>
-        <p class="hero__subtitle">
-          Docente e investigador en <strong>Ingeniería del Software</strong>,
-          apasionado por la inteligencia artificial, el desarrollo web y la
-          divulgación tecnológica.
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero__aurora hero__aurora--one parallax-layer" data-parallax data-speed="0.08" data-rotate="1.2" aria-hidden="true"></div>
+      <div class="hero__aurora hero__aurora--two parallax-layer" data-parallax data-speed="0.12" data-rotate="-1.4" aria-hidden="true"></div>
+      <div class="hero__gridlines parallax-layer" data-parallax data-speed="0.05" aria-hidden="true"></div>
+
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <p class="hero__eyebrow">Profesor · Investigador · Ingeniería Informática</p>
+          <h1 class="hero__title">
+            Sistemas inteligentes,<br />
+            docencia aplicada y software confiable.
+          </h1>
+          <p class="hero__subtitle">
+            Rubén Ces desarrolla investigación en inteligencia artificial, redes vehiculares,
+            blockchain e innovación educativa, con una práctica docente centrada en proyectos,
+            arquitectura moderna y transferencia académica real.
+          </p>
+
+          <div class="hero__actions">
+            <a href="#publicaciones" class="btn btn--primary">Ver artículos</a>
+            <a href="#proyectos" class="btn btn--secondary">Explorar proyectos</a>
+            <a href="https://orcid.org/0000-0003-2857-5693" target="_blank" rel="noopener" class="btn btn--ghost">ORCID</a>
+            <a href="https://github.com/rubences" target="_blank" rel="noopener" class="btn btn--ghost">GitHub</a>
+          </div>
+
+          <div class="hero__metrics">
+            <article class="metric-card reveal">
+              <span class="metric-card__value">2026</span>
+              <span class="metric-card__label">Portfolio reconstruido con Three.js y narrativa visual</span>
+            </article>
+            <article class="metric-card reveal">
+              <span class="metric-card__value">4</span>
+              <span class="metric-card__label">Artículos y tesis enlazados con DOI o URL académica</span>
+            </article>
+            <article class="metric-card reveal">
+              <span class="metric-card__value">3</span>
+              <span class="metric-card__label">Ejes de trabajo: IA, redes seguras y tecnología educativa</span>
+            </article>
+          </div>
+        </div>
+
+        <div class="hero__visual reveal">
+          <div class="hero__visual-shell parallax-layer" data-parallax data-speed="0.16" data-rotate="2.2">
+            <canvas id="heroCanvas" aria-hidden="true"></canvas>
+
+            <div class="hero__hud hero__hud--top">
+              <span class="hero__hud-label">Investigación activa</span>
+              <strong>IA generativa · VANET · Blockchain</strong>
+            </div>
+
+            <div class="hero__hud hero__hud--bottom">
+              <span class="hero__hud-label">Docencia orientada a práctica</span>
+              <strong>Python, Java, Kotlin, Django, Spring</strong>
+            </div>
+
+            <div class="hero__floating hero__floating--left parallax-layer" data-parallax data-speed="0.22" data-rotate="-3">
+              <span class="hero__floating-kicker">Último foco</span>
+              <p>PathRAG para aprendizaje adaptativo inclusivo.</p>
+            </div>
+
+            <div class="hero__floating hero__floating--right parallax-layer" data-parallax data-speed="0.2" data-rotate="2.6">
+              <span class="hero__floating-kicker">Línea técnica</span>
+              <p>Consenso seguro y autenticación eficiente en entornos vehiculares.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__scroll">
+        <span>Desplaza</span>
+        <div class="hero__scroll-line"></div>
+      </div>
+    </section>
+
+    <section class="section section--profile" id="sobre-mi">
+      <div class="container section__layout">
+        <div>
+          <p class="section__eyebrow">Perfil</p>
+          <h2 class="section__title">Investigación aplicada con salida docente y tecnológica</h2>
+        </div>
+        <p class="section__intro">
+          El portfolio se organiza como una capa de investigación, una capa de ingeniería y una capa de
+          transferencia educativa. El objetivo no es solo listar trabajos, sino mostrar cómo cada línea se conecta.
         </p>
-        <div class="hero__actions">
-          <a href="#proyectos" class="btn btn--primary">Ver proyectos</a>
-          <a href="https://orcid.org/0000-0003-2857-5693" target="_blank" rel="noopener" class="btn btn--orcid">
-            <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" alt="ORCID" width="16" height="16" />
-            ORCID
-          </a>
-          <a href="https://github.com/rubences" target="_blank" rel="noopener" class="btn btn--ghost">
-            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.39.6.11.82-.26.82-.58l-.01-2.03c-3.34.72-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.74-1.33-1.74-1.09-.74.08-.73.08-.73 1.2.08 1.83 1.24 1.83 1.24 1.07 1.83 2.8 1.3 3.48.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.31-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.24 2.87.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22l-.01 3.29c0 .32.21.7.82.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
-            GitHub
-          </a>
-        </div>
       </div>
-      <div class="hero__avatar" aria-hidden="true">
-        <div class="avatar-ring">
-          <div class="avatar-initials">RC</div>
-        </div>
-        <div class="avatar-badge">
-          <a href="https://orcid.org/0000-0003-2857-5693" target="_blank" rel="noopener">
-            <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" alt="ORCID logo" width="20" height="20" />
-            0000-0003-2857-5693
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="hero__scroll">
-      <span>Scroll</span>
-      <div class="hero__scroll-line"></div>
-    </div>
-  </section>
 
-  <!-- ─── SOBRE MÍ ───────────────────────────────────────── -->
-  <section class="section" id="sobre-mi">
-    <div class="container">
-      <h2 class="section__title">Sobre mí</h2>
-      <div class="about__grid">
-        <div class="about__text">
+      <div class="container about__grid">
+        <article class="about-panel reveal">
+          <h3>Quién soy</h3>
           <p>
-            Soy profesor e investigador en el área de <strong>Ingeniería Informática</strong>,
-            con experiencia en la docencia de programación, desarrollo de software y redes
-            de ordenadores. Mi trabajo combina la enseñanza activa con la investigación
-            aplicada en inteligencia artificial, arquitecturas de microservicios y
-            desarrollo web moderno.
+            Profesor e investigador en Ingeniería Informática, con experiencia en docencia universitaria,
+            desarrollo de software, programación reactiva, inteligencia artificial y redes de ordenadores.
           </p>
           <p>
-            He desarrollado y publicado materiales educativos en múltiples lenguajes y
-            tecnologías — Python, Java, Kotlin, Django — con el objetivo de acercar la
-            programación a los estudiantes de forma práctica y accesible.
+            Combino producción académica con materiales abiertos y repositorios docentes para que la investigación
+            tenga una traducción directa a laboratorio, aula y prototipos funcionales.
           </p>
           <p>
-            Mi perfil ORCID recoge mis publicaciones científicas y contribuciones a la
-            comunidad académica:
-            <a href="https://orcid.org/0000-0003-2857-5693" target="_blank" rel="noopener">
-              orcid.org/0000-0003-2857-5693
-            </a>.
+            El perfil ORCID centraliza la actividad científica y permite rastrear publicaciones recientes en educación,
+            seguridad vehicular y sistemas distribuidos.
           </p>
-        </div>
-        <div class="about__stats">
-          <div class="stat-card">
-            <span class="stat-card__number">500+</span>
-            <span class="stat-card__label">Repositorios &amp; commits</span>
+        </article>
+
+        <article class="trajectory-card reveal">
+          <div class="trajectory-card__item">
+            <span class="trajectory-card__year">IA</span>
+            <p>LLM, recuperación aumentada, aprendizaje adaptativo e integración en educación superior.</p>
           </div>
-          <div class="stat-card">
-            <span class="stat-card__number">10+</span>
-            <span class="stat-card__label">Tecnologías impartidas</span>
+          <div class="trajectory-card__item">
+            <span class="trajectory-card__year">Sistemas</span>
+            <p>Arquitecturas reactivas, microservicios, consenso distribuido y protocolos confiables.</p>
           </div>
-          <div class="stat-card">
-            <span class="stat-card__number">4+</span>
-            <span class="stat-card__label">Años en GitHub</span>
-          </div>
-          <div class="stat-card">
-            <span class="stat-card__number">ORCID</span>
-            <span class="stat-card__label">Perfil investigador</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── HABILIDADES ────────────────────────────────────── -->
-  <section class="section section--alt" id="habilidades">
-    <div class="container">
-      <h2 class="section__title">Habilidades &amp; Tecnologías</h2>
-      <div class="skills__grid">
-
-        <div class="skill-group">
-          <h3 class="skill-group__title">Lenguajes</h3>
-          <ul class="skill-list">
-            <li class="skill-tag skill-tag--python">Python</li>
-            <li class="skill-tag skill-tag--java">Java</li>
-            <li class="skill-tag skill-tag--kotlin">Kotlin</li>
-            <li class="skill-tag">JavaScript</li>
-            <li class="skill-tag">SQL</li>
-          </ul>
-        </div>
-
-        <div class="skill-group">
-          <h3 class="skill-group__title">Frameworks &amp; Librerías</h3>
-          <ul class="skill-list">
-            <li class="skill-tag">Django</li>
-            <li class="skill-tag">Spring Boot</li>
-            <li class="skill-tag">WebFlux / RxJava</li>
-            <li class="skill-tag">LangChain</li>
-            <li class="skill-tag">FAISS</li>
-            <li class="skill-tag">Bootstrap</li>
-          </ul>
-        </div>
-
-        <div class="skill-group">
-          <h3 class="skill-group__title">IA &amp; Datos</h3>
-          <ul class="skill-list">
-            <li class="skill-tag">LLM / GPT</li>
-            <li class="skill-tag">Embeddings vectoriales</li>
-            <li class="skill-tag">MemGPT</li>
-            <li class="skill-tag">Jupyter Notebook</li>
-            <li class="skill-tag">BigData</li>
-          </ul>
-        </div>
-
-        <div class="skill-group">
-          <h3 class="skill-group__title">Infraestructura &amp; Otros</h3>
-          <ul class="skill-list">
-            <li class="skill-tag">Android / Móvil</li>
-            <li class="skill-tag">Blockchain</li>
-            <li class="skill-tag">Redes de ordenadores</li>
-            <li class="skill-tag">Git &amp; GitHub</li>
-            <li class="skill-tag">MkDocs</li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── PROYECTOS ──────────────────────────────────────── -->
-  <section class="section" id="proyectos">
-    <div class="container">
-      <h2 class="section__title">Proyectos destacados</h2>
-      <p class="section__subtitle">
-        Selección de repositorios públicos en
-        <a href="https://github.com/rubences" target="_blank" rel="noopener">github.com/rubences</a>
-      </p>
-      <div class="projects__grid">
-
-        <article class="project-card">
-          <div class="project-card__header">
-            <svg class="project-card__icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 3h18v18H3z" opacity=".1"/><path fill="currentColor" d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-            <span class="project-card__lang">Java · Spring</span>
-          </div>
-          <h3 class="project-card__title">
-            <a href="https://github.com/rubences/Practicas_Desarrollo_Software" target="_blank" rel="noopener">
-              Prácticas Desarrollo Software
-            </a>
-          </h3>
-          <p class="project-card__desc">
-            Materiales y ejercicios para programación reactiva con Spring Boot,
-            WebFlux y RxJava. Base para la programación dirigida por eventos.
-          </p>
-          <div class="project-card__footer">
-            <span class="badge">Spring Boot</span>
-            <span class="badge">RxJava</span>
-            <span class="badge">WebFlux</span>
+          <div class="trajectory-card__item">
+            <span class="trajectory-card__year">Redes</span>
+            <p>VANET, autenticación, intercambio seguro de datos y blockchain aplicado a movilidad.</p>
           </div>
         </article>
 
-        <article class="project-card">
+        <div class="about__stats">
+          <article class="stat-card reveal">
+            <span class="stat-card__number">500+</span>
+            <span class="stat-card__label">Repositorios y actividad pública en GitHub</span>
+          </article>
+          <article class="stat-card reveal">
+            <span class="stat-card__number">10+</span>
+            <span class="stat-card__label">Tecnologías utilizadas en docencia y prototipado</span>
+          </article>
+          <article class="stat-card reveal">
+            <span class="stat-card__number">3</span>
+            <span class="stat-card__label">Dominios conectados: educación, IA y ciberseguridad vehicular</span>
+          </article>
+          <article class="stat-card reveal">
+            <span class="stat-card__number">ORCID</span>
+            <span class="stat-card__label">Registro investigador con publicaciones verificables</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--muted" id="habilidades">
+      <div class="container section__layout">
+        <div>
+          <p class="section__eyebrow">Stack</p>
+          <h2 class="section__title">Tecnologías que sostienen investigación, prototipos y aula</h2>
+        </div>
+        <p class="section__intro">
+          El stack está organizado por capacidad operativa: construir software, instrumentar IA, desplegar servicios y convertirlo en material docente reusable.
+        </p>
+      </div>
+
+      <div class="container skills__grid">
+        <article class="skill-panel reveal">
+          <h3>Lenguajes</h3>
+          <ul class="skill-list">
+            <li>Python</li>
+            <li>Java</li>
+            <li>Kotlin</li>
+            <li>JavaScript</li>
+            <li>SQL</li>
+          </ul>
+        </article>
+
+        <article class="skill-panel reveal">
+          <h3>Backend y frameworks</h3>
+          <ul class="skill-list">
+            <li>Django</li>
+            <li>Spring Boot</li>
+            <li>WebFlux</li>
+            <li>RxJava</li>
+            <li>Bootstrap</li>
+          </ul>
+        </article>
+
+        <article class="skill-panel reveal">
+          <h3>IA y datos</h3>
+          <ul class="skill-list">
+            <li>LLM y GPT</li>
+            <li>LangChain</li>
+            <li>FAISS</li>
+            <li>Embeddings</li>
+            <li>Jupyter</li>
+          </ul>
+        </article>
+
+        <article class="skill-panel reveal">
+          <h3>Infraestructura y dominios</h3>
+          <ul class="skill-list">
+            <li>Android</li>
+            <li>Blockchain</li>
+            <li>Redes de ordenadores</li>
+            <li>Git y GitHub</li>
+            <li>MkDocs</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="proyectos">
+      <div class="container section__layout">
+        <div>
+          <p class="section__eyebrow">Repositorios</p>
+          <h2 class="section__title">Proyectos que extienden la actividad académica a código público</h2>
+        </div>
+        <p class="section__intro">
+          Selección de repositorios que muestran materiales docentes, experimentación con IA, aplicaciones móviles y ejemplos de arquitectura reactiva.
+        </p>
+      </div>
+
+      <div class="container projects__grid">
+        <article class="project-card reveal">
           <div class="project-card__header">
-            <svg class="project-card__icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 3h18v18H3z" opacity=".1"/><path fill="currentColor" d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-            <span class="project-card__lang">Python · Django</span>
+            <span class="project-card__tag">Java · Spring</span>
+            <span class="project-card__pulse"></span>
           </div>
-          <h3 class="project-card__title">
-            <a href="https://github.com/rubences/Proyectos_Django" target="_blank" rel="noopener">
-              Proyectos Django + LLM
-            </a>
-          </h3>
-          <p class="project-card__desc">
-            Aplicaciones Django con búsqueda vectorial (FAISS), integración de LLM
-            y chatbots con memoria persistente usando MemGPT y LangChain.
-          </p>
+          <h3><a href="https://github.com/rubences/Practicas_Desarrollo_Software" target="_blank" rel="noopener">Prácticas Desarrollo Software</a></h3>
+          <p>Ejercicios y materiales para programación reactiva, servicios dirigidos por eventos y diseño backend moderno con Spring Boot, WebFlux y RxJava.</p>
+          <div class="project-card__footer">
+            <span class="badge">Spring Boot</span>
+            <span class="badge">WebFlux</span>
+            <span class="badge">RxJava</span>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-card__header">
+            <span class="project-card__tag">Python · Django</span>
+            <span class="project-card__pulse"></span>
+          </div>
+          <h3><a href="https://github.com/rubences/Proyectos_Django" target="_blank" rel="noopener">Proyectos Django + LLM</a></h3>
+          <p>Aplicaciones con búsqueda vectorial, chatbots con memoria persistente e integración de modelos de lenguaje en flujos web de propósito académico.</p>
           <div class="project-card__footer">
             <span class="badge">Django</span>
             <span class="badge">FAISS</span>
@@ -225,184 +272,179 @@
           </div>
         </article>
 
-        <article class="project-card">
+        <article class="project-card reveal">
           <div class="project-card__header">
-            <svg class="project-card__icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 3h18v18H3z" opacity=".1"/><path fill="currentColor" d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-            <span class="project-card__lang">Kotlin · Android</span>
+            <span class="project-card__tag">Kotlin · Android</span>
+            <span class="project-card__pulse"></span>
           </div>
-          <h3 class="project-card__title">
-            <a href="https://github.com/rubences/myapp" target="_blank" rel="noopener">
-              Sistema de Reservas (Android)
-            </a>
-          </h3>
-          <p class="project-card__desc">
-            Aplicación móvil de reservas desarrollada en Kotlin para Android,
-            demostrando el ciclo completo de desarrollo móvil nativo.
-          </p>
+          <h3><a href="https://github.com/rubences/myapp" target="_blank" rel="noopener">Sistema de Reservas</a></h3>
+          <p>Aplicación móvil nativa en Kotlin centrada en la construcción completa del ciclo de una solución Android funcional y mantenible.</p>
           <div class="project-card__footer">
             <span class="badge">Kotlin</span>
             <span class="badge">Android</span>
           </div>
         </article>
 
-        <article class="project-card">
+        <article class="project-card reveal">
           <div class="project-card__header">
-            <svg class="project-card__icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 3h18v18H3z" opacity=".1"/><path fill="currentColor" d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-            <span class="project-card__lang">Python</span>
+            <span class="project-card__tag">Python · Blockchain</span>
+            <span class="project-card__pulse"></span>
           </div>
-          <h3 class="project-card__title">
-            <a href="https://github.com/rubences/blockchain_Python_Facil" target="_blank" rel="noopener">
-              Blockchain en Python (Fácil)
-            </a>
-          </h3>
-          <p class="project-card__desc">
-            Implementación didáctica de una cadena de bloques en Python para
-            comprender los fundamentos de la tecnología blockchain.
-          </p>
+          <h3><a href="https://github.com/rubences/blockchain_Python_Facil" target="_blank" rel="noopener">Blockchain en Python</a></h3>
+          <p>Implementación didáctica para explicar cadena de bloques, validación y estructura de datos distribuida con foco pedagógico claro.</p>
           <div class="project-card__footer">
             <span class="badge">Blockchain</span>
             <span class="badge">Python</span>
           </div>
         </article>
 
-        <article class="project-card">
+        <article class="project-card reveal">
           <div class="project-card__header">
-            <svg class="project-card__icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 3h18v18H3z" opacity=".1"/><path fill="currentColor" d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-            <span class="project-card__lang">Python · IA</span>
+            <span class="project-card__tag">Python · IA</span>
+            <span class="project-card__pulse"></span>
           </div>
-          <h3 class="project-card__title">
-            <a href="https://github.com/rubences/02_Inteligenica_Aritficial" target="_blank" rel="noopener">
-              Inteligencia Artificial
-            </a>
-          </h3>
-          <p class="project-card__desc">
-            Colección de algoritmos y ejemplos de IA: búsqueda, algoritmos evolutivos,
-            redes neuronales y aprendizaje automático.
-          </p>
+          <h3><a href="https://github.com/rubences/02_Inteligenica_Aritficial" target="_blank" rel="noopener">Inteligencia Artificial</a></h3>
+          <p>Conjunto de algoritmos, ejemplos y recursos para aprendizaje automático, redes neuronales, búsqueda y experimentación introductoria.</p>
           <div class="project-card__footer">
-            <span class="badge">IA / ML</span>
+            <span class="badge">IA</span>
+            <span class="badge">ML</span>
             <span class="badge">Python</span>
           </div>
         </article>
 
-        <article class="project-card">
+        <article class="project-card reveal">
           <div class="project-card__header">
-            <svg class="project-card__icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 3h18v18H3z" opacity=".1"/><path fill="currentColor" d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-            <span class="project-card__lang">Redes</span>
+            <span class="project-card__tag">Redes</span>
+            <span class="project-card__pulse"></span>
           </div>
-          <h3 class="project-card__title">
-            <a href="https://github.com/rubences/Curso_Redes_Ordenadores" target="_blank" rel="noopener">
-              Curso Redes de Ordenadores
-            </a>
-          </h3>
-          <p class="project-card__desc">
-            Material docente completo para el curso de redes de ordenadores,
-            con ejercicios prácticos y exámenes.
-          </p>
+          <h3><a href="https://github.com/rubences/Curso_Redes_Ordenadores" target="_blank" rel="noopener">Curso Redes de Ordenadores</a></h3>
+          <p>Material docente completo con prácticas, teoría y evaluación para introducir y consolidar conceptos de comunicación y arquitectura de red.</p>
           <div class="project-card__footer">
-            <span class="badge">Redes</span>
             <span class="badge">TCP/IP</span>
+            <span class="badge">Docencia</span>
+            <span class="badge">Networking</span>
+          </div>
+        </article>
+      </div>
+
+      <div class="container projects__cta reveal">
+        <a href="https://github.com/rubences?tab=repositories" target="_blank" rel="noopener" class="btn btn--secondary">Ver todos los repositorios</a>
+      </div>
+    </section>
+
+    <section class="section section--muted" id="publicaciones">
+      <div class="container section__layout">
+        <div>
+          <p class="section__eyebrow">Artículos</p>
+          <h2 class="section__title">Publicaciones académicas enlazadas y verificadas desde ORCID</h2>
+        </div>
+        <p class="section__intro">
+          Selección breve de trabajos recientes con acceso mediante DOI o enlace académico directo. Sirven como entrada rápida al trabajo científico más visible del perfil.
+        </p>
+      </div>
+
+      <div class="container publications__top">
+        <article class="orcid-card reveal">
+          <div>
+            <p class="orcid-card__label">ORCID</p>
+            <h3>0000-0003-2857-5693</h3>
+            <p>Perfil investigador con trazabilidad pública de publicaciones, tesis y contribuciones científicas.</p>
+          </div>
+          <a href="https://orcid.org/0000-0003-2857-5693" target="_blank" rel="noopener" class="btn btn--primary">Abrir ORCID</a>
+        </article>
+
+        <article class="publication-note reveal">
+          <span class="publication-note__label">Curaduría</span>
+          <p>Los enlaces incluidos aquí se han verificado contra ORCID y DOI públicos para evitar referencias vacías o no resolubles.</p>
+        </article>
+      </div>
+
+      <div class="container articles__grid">
+        <article class="article-card reveal">
+          <p class="article-card__meta">2026 · RIED · IA educativa</p>
+          <h3>Aplicación de PathRAG en aprendizaje adaptativo con IA generativa para una educación inclusiva y sostenible</h3>
+          <p>Trabajo centrado en aprendizaje adaptativo, inclusión y sostenibilidad con recuperación aumentada y modelos generativos en contexto universitario.</p>
+          <div class="article-card__footer">
+            <span class="badge">DOI 10.5944/ried.45378</span>
+            <a href="https://doi.org/10.5944/ried.45378" target="_blank" rel="noopener">Leer artículo</a>
           </div>
         </article>
 
-      </div>
-      <div class="projects__cta">
-        <a href="https://github.com/rubences?tab=repositories" target="_blank" rel="noopener" class="btn btn--outline">
-          Ver todos los repositorios →
-        </a>
-      </div>
-    </div>
-  </section>
+        <article class="article-card reveal">
+          <p class="article-card__meta">2025 · Sensors · VANET</p>
+          <h3>CoCoChain: A Concept-Aware Consensus Protocol for Secure Sensor Data Exchange in Vehicular Ad Hoc Networks</h3>
+          <p>Protocolo de consenso orientado a contexto para intercambio seguro de datos en redes vehiculares ad hoc y sistemas de sensorización distribuida.</p>
+          <div class="article-card__footer">
+            <span class="badge">DOI 10.3390/s25196226</span>
+            <a href="https://doi.org/10.3390/s25196226" target="_blank" rel="noopener">Leer artículo</a>
+          </div>
+        </article>
 
-  <!-- ─── PUBLICACIONES (ORCID) ──────────────────────────── -->
-  <section class="section section--alt" id="publicaciones">
-    <div class="container">
-      <h2 class="section__title">Publicaciones &amp; Investigación</h2>
-      <p class="section__subtitle">
-        Consulta mi perfil ORCID para el listado completo de publicaciones
-        científicas y contribuciones académicas.
-      </p>
-      <div class="orcid-card">
-        <div class="orcid-card__logo">
-          <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" alt="" aria-hidden="true" width="32" height="32" />
-          <span>ORCID</span>
+        <article class="article-card reveal">
+          <p class="article-card__meta">2025 · Sensors · Autenticación</p>
+          <h3>Improving Vehicular Network Authentication with Teegraph: A Hashgraph-Based Efficiency Approach</h3>
+          <p>Investigación sobre autenticación eficiente en redes vehiculares, usando un enfoque hashgraph para reforzar fiabilidad y coste operativo.</p>
+          <div class="article-card__footer">
+            <span class="badge">DOI 10.3390/s25154856</span>
+            <a href="https://doi.org/10.3390/s25154856" target="_blank" rel="noopener">Leer artículo</a>
+          </div>
+        </article>
+
+        <article class="article-card reveal">
+          <p class="article-card__meta">2024 · Tesis doctoral · Blockchain</p>
+          <h3>Contribución a la ejecución segura y confiable de servicios distribuidos en redes ad-hoc vehiculares mediante tecnologías Blockchain</h3>
+          <p>Tesis enfocada en servicios distribuidos confiables y ejecución segura en VANET mediante tecnologías blockchain y mecanismos de coordinación robusta.</p>
+          <div class="article-card__footer">
+            <span class="badge">DOI 10.20868/UPM.thesis.83186</span>
+            <a href="https://doi.org/10.20868/UPM.thesis.83186" target="_blank" rel="noopener">Leer tesis</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="contacto">
+      <div class="container section__layout">
+        <div>
+          <p class="section__eyebrow">Contacto</p>
+          <h2 class="section__title">Colaboración académica, docencia o desarrollo</h2>
         </div>
-        <div class="orcid-card__info">
-          <p class="orcid-card__id">0000-0003-2857-5693</p>
-          <p class="orcid-card__name">Rubén Ces</p>
-        </div>
-        <a href="https://orcid.org/0000-0003-2857-5693" target="_blank" rel="noopener" class="btn btn--orcid">
-          Ver perfil ORCID
-        </a>
+        <p class="section__intro">
+          El punto de contacto está pensado para proyectos de investigación, colaboración docente y desarrollo de prototipos vinculados a IA o software distribuido.
+        </p>
       </div>
 
-      <div class="research-areas">
-        <h3 class="research-areas__title">Áreas de investigación</h3>
-        <div class="research-areas__grid">
-          <div class="research-area-card">
-            <div class="research-area-card__icon">🤖</div>
-            <h4>Inteligencia Artificial</h4>
-            <p>LLM, modelos de lenguaje, búsqueda vectorial y chatbots con memoria.</p>
-          </div>
-          <div class="research-area-card">
-            <div class="research-area-card__icon">🌐</div>
-            <h4>Ingeniería del Software</h4>
-            <p>Arquitecturas reactivas, microservicios y desarrollo dirigido por eventos.</p>
-          </div>
-          <div class="research-area-card">
-            <div class="research-area-card__icon">📚</div>
-            <h4>Tecnología Educativa</h4>
-            <p>Metodologías de enseñanza de la programación y recursos didácticos abiertos.</p>
-          </div>
-          <div class="research-area-card">
-            <div class="research-area-card__icon">🔗</div>
-            <h4>Blockchain &amp; Seguridad</h4>
-            <p>Tecnologías descentralizadas y criptografía aplicada.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── CONTACTO ────────────────────────────────────────── -->
-  <section class="section" id="contacto">
-    <div class="container">
-      <h2 class="section__title">Contacto</h2>
-      <p class="section__subtitle">
-        ¿Tienes alguna pregunta, colaboración o proyecto en mente? ¡Escríbeme!
-      </p>
-      <div class="contact__grid">
-        <div class="contact__links">
+      <div class="container contact__grid">
+        <article class="contact-panel reveal">
+          <h3>Canales</h3>
           <a href="https://github.com/rubences" target="_blank" rel="noopener" class="contact-link">
-            <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="currentColor" d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.39.6.11.82-.26.82-.58l-.01-2.03c-3.34.72-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.74-1.33-1.74-1.09-.74.08-.73.08-.73 1.2.08 1.83 1.24 1.83 1.24 1.07 1.83 2.8 1.3 3.48.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.31-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.24 2.87.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22l-.01 3.29c0 .32.21.7.82.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
-            <span>github.com/rubences</span>
+            <span class="contact-link__label">GitHub</span>
+            <strong>github.com/rubences</strong>
           </a>
           <a href="https://orcid.org/0000-0003-2857-5693" target="_blank" rel="noopener" class="contact-link">
-            <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" alt="ORCID" width="24" height="24" />
-            <span>orcid.org/0000-0003-2857-5693</span>
+            <span class="contact-link__label">ORCID</span>
+            <strong>orcid.org/0000-0003-2857-5693</strong>
           </a>
-        </div>
-        <div class="contact__message">
-          <p>
-            Para colaboraciones académicas, consultas sobre docencia o proyectos de
-            desarrollo, puedes contactarme a través de GitHub o mi perfil ORCID.
-          </p>
-          <a href="https://github.com/rubences" target="_blank" rel="noopener" class="btn btn--primary">
-            Ir a GitHub
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
+        </article>
 
-  <!-- ─── FOOTER ─────────────────────────────────────────── -->
+        <article class="contact-panel contact-panel--accent reveal">
+          <span class="contact-panel__kicker">Disponibilidad</span>
+          <p>
+            Interés en colaboración en publicaciones, innovación educativa, arquitecturas reactivas, prototipos con IA y experimentos sobre redes vehiculares seguras.
+          </p>
+          <a href="https://github.com/rubences" target="_blank" rel="noopener" class="btn btn--primary">Ir a GitHub</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
   <footer class="site-footer">
     <div class="container site-footer__inner">
-      <p>© 2026 Rubén Ces · <a href="https://orcid.org/0000-0003-2857-5693" target="_blank" rel="noopener">ORCID 0000-0003-2857-5693</a></p>
-      <a href="#top" class="back-to-top" aria-label="Volver arriba">↑</a>
+      <p>© 2026 Rubén Ces. Investigación, docencia y software con trazabilidad pública.</p>
+      <a href="#top" class="back-to-top" aria-label="Volver arriba">Volver arriba</a>
     </div>
   </footer>
 
+  <script src="https://unpkg.com/three@0.163.0/build/three.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
